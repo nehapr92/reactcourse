@@ -1,0 +1,23 @@
+{
+  "name": "course",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nehapr92/reactcourse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nehapr92/reactcourse/issues"
+  },
+  "homepage": "https://github.com/nehapr92/reactcourse#readme",
+  "description": "",
+  "dependencies": {
+    "parcel": "^2.14.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
