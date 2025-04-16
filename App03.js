@@ -94,3 +94,105 @@ root.render(jsxHeading);
 // In HTML, you cannot embed JavaScript expressions directly.
 // 5. Comments: In JSX, comments are written inside curly braces and use the JavaScript comment syntax.
 // For example, {/* This is a comment */} in JSX. In HTML, comments are written as <!-- This is a comment -->.
+
+
+// - Functional Component -
+// A function component is a JavaScript function that returns JSX elements.
+// example of a function component:
+// function Welcome(props) {
+//     return <h1>Hello, {props.name}!</h1>;
+// }
+// Arrow function component -
+// An arrow function component is a function component defined using an arrow function syntax.
+// example of an arrow function component:
+// const Welcome = (props) => {
+//     return <h1>Hello, {props.name}!</h1>;
+// }
+
+// Difference between function component and JSX Element -
+// A function component is a reusable piece of code that can accept props and return JSX elements.
+// Syntax difference -
+// A function component is defined using the function keyword or arrow function syntax, while a JSX element is created using the JSX syntax.
+// A function component can accept props and can have state, while a JSX element cannot accept props or have state.
+// A function component can be reused multiple times with different props, while a JSX element is a single instance of a component.
+// A function component can have lifecycle methods, while a JSX element does not have lifecycle methods.
+
+
+const HeadingFC1 = () => (
+    <h1 id="heading2">Hello World heading2!</h1>
+);
+
+const HeadingFC2 = () => {
+   return <h1 id="heading3">Hello World heading3!</h1>
+};
+
+root.render(<HeadingFC1 />);
+root.render(<HeadingFC2 />);
+
+// - convert react element to functional component -
+// A React element can be converted to a functional component by wrapping it in a function that returns the element.
+// For example, if we have a React element like this:
+// const element = <h1>Hello World!</h1>;   
+// We can convert it to a functional component like this:
+const MyComponent = () => {
+    return element
+};
+
+
+
+// Syntax for function components -
+//() => <h1>Hello</h1> | ✅ | Works if JSX is on the same line
+//() => (<h1>Hello</h1>) | ✅ | Best practice — always use parens
+//() => { return <h1>Hello</h1>; } | ✅ | Explicit return
+//() => { <h1>Hello</h1>; } | ❌ | No return statement = undefined
+
+
+// - diference between JSX element and react element -
+// A React element is an object representation of a DOM element created using React.createElement() or JSX syntax.
+// A JSX element is a syntactic sugar for creating React elements using JSX syntax.
+// JSX elements are transformed into React elements by a compiler (like Babel) before being rendered in the browser.
+
+
+// - Difference in render method for react element and functional component -
+// The render method for a React element takes the virtual DOM object (React element) and updates the real DOM to match it.
+// The render method for a functional component takes the component function and calls it to get the React element, which is then rendered to the DOM.
+// eg
+root.render(<MyComponent />); // Renders the functional component
+root.render(heading); // Renders the React element
+root.render(jsxHeading); // Renders the JSX element
+
+
+//Data wrapped in curly braces is called a JavaScript expression.
+// Sanitizes the data and prevents XSS attacks.
+// XSS attacks are a type of security vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users.
+// This can lead to unauthorized access to sensitive data, session hijacking, and other security issues.
+// React automatically escapes any values embedded in JSX curly braces to prevent XSS attacks.
+
+
+// - Call functional component inside another functional component -
+// You can call a functional component inside another functional component by simply using the component name as a tag.
+// For example, if you have a functional component called MyComponent, you can call it inside another functional component like this:
+const ParentComponent1 = () => {
+    return (
+        <div>
+            <h1>Parent Component</h1>        
+            <MyComponent /> // Calling the child component
+        </div>   
+    );
+};
+// This will render the ParentComponent along with the MyComponent inside it.
+
+// Another way to call a functional component inside another functional component is by using the function name directly without the JSX syntax.
+// For example:
+const ParentComponent2 = () => {
+
+    return (
+        <div>
+            <h1>Parent Component</h1>
+            {MyComponent()} // Calling the child component without JSX syntax    
+            <MyComponent></MyComponent> // Calling the child component with JSX syntax
+            <MyComponent /> // Calling the child component with JSX syntax
+        </div>
+    );
+};
+// This will also render the ParentComponent along with the MyComponent inside it.

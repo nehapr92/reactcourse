@@ -1,3 +1,7 @@
+        // React is javascript library for building user interfaces with single page applications (SPA).
+        // It allows developers to create reusable UI components and manage the state of the application efficiently.
+        
+        
         // Create a virtual DOM element representing an <h1> tag with the text "Hello World!"
         // React.createElement(...) is how React creates a virtual DOM object manually, without using JSX syntax.
         // It returns a JavaScript object that React uses internally to render the UI.
