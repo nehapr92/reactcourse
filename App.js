@@ -1,11 +1,18 @@
+
+
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 
-const heading1 = React.createElement('h1', {id: 'heading'}, 'Hello World!');
-const heading2 = React.createElement('h1', {id: 'heading2'}, 'Hello World2!');
+const heading = React.createElement('h1', {id: 'heading'}, 'Hello World!');
+const jsxHeading = <h1 id="heading">Hello World jsxHeading!</h1>;
 
-const parentDiv = React.createElement('div', {id: 'parent'}, [heading1, heading2]);
-
+// - What is the function of library ReactDOM? -
+// ReactDOM is a library that provides DOM-specific methods to interact with the actual DOM.
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(parentDiv);
+
+// - What is render? -
+// The render method takes the virtual DOM object (heading) and updates the real DOM to match it.
+root.render(heading);
+root.render(jsxHeading);

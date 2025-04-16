@@ -131,6 +131,18 @@ Parcel
 // The --dist-dir option specifies the output directory for the production build. You can change "build" to any name you prefer.
 // Parcel will optimize your code, minify it, and create a set of files that are ready to be deployed to a web server.
 
+
+why my react app is fast due to bundling?
+// Bundling is the process of combining multiple JavaScript files into a single file (or a few files) that can be loaded by the browser. This has several benefits that make your React app faster:
+// 1. Fewer HTTP Requests: When you bundle your JavaScript files, the browser has to make fewer requests to the server. Instead of loading multiple files separately, it can load one or a few bundled files. This reduces latency and speeds up page loading times.
+// 2. Minification: Bundlers like Parcel can also minify your code, which means they remove unnecessary characters (like spaces and comments) to make the file size smaller. Smaller files load faster in the browser.
+// 3. Code Splitting: Some bundlers support code splitting, which allows you to load only the parts of your code that are needed for a specific page or feature. This means that users don’t have to download the entire application at once, making it faster to load and interact with the app.
+// 4. Caching: Bundled files can be cached by the browser, which means that once they are loaded, the browser can store them and use them for future visits. This reduces loading times for returning users.
+// 5. Optimized Loading: Bundlers can optimize the loading order of your files, ensuring that critical resources are loaded first, improving the perceived performance of your app.
+// 6. Tree Shaking: Bundlers can also remove unused code from your application, which reduces the size of the final bundle and improves performance. This is especially useful in large applications with many dependencies.
+// 7. HMR (Hot Module Replacement): Some bundlers support HMR, which allows you to update your code without refreshing the entire page. This speeds up development and improves the overall experience for developers.
+// // Overall, bundling helps reduce the number of files the browser has to load, minimizes file sizes, and optimizes the loading process, all of which contribute to a faster React app.
+
 */
 
 import React from 'react';
